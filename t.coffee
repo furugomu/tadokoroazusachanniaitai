@@ -45,7 +45,6 @@ TwitterStrategy = require('passport-twitter').Strategy
 passport.use(new TwitterStrategy(
   consumerKey: process.env['TWITTER_CONSUMER_KEY']
   consumerSecret: process.env['TWITTER_CONSUMER_SECRET']
-  callbackURL: 'http://192.168.6.142:5000/auth/twitter/callback'
 , (token, tokenSecret, profile, done) ->
   user =
     token: token
